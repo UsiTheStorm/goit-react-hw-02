@@ -13,11 +13,11 @@ function App() {
     bad: 0,
   };
   return (
-    <>
+    <div className="App">
       <Description />
       <Options />
       <Feedback />
-    </>
+    </div>
   );
 }
 

@@ -2,10 +2,16 @@ import React from 'react';
 
 function Options() {
   return (
-    <div>
-      <button className="btn feedback">Good</button>
-      <button className="btn feedback">Neutral</button>
-      <button className="btn feedback">Bad</button>
+    <div className="btn-group">
+      <button className="btn feedback" id="good">
+        Good
+      </button>
+      <button className="btn feedback" id="neutral">
+        Neutral
+      </button>
+      <button className="btn feedback" id="bad">
+        Bad
+      </button>
       <button className="btn reset">Reset</button>
     </div>
   );

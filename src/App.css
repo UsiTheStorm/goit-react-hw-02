@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+#root {
+  max-width: 1280px;
+  width: 100%;
+
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', sans-serif;
+  background-color: #f0f0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #5d3fd3;
+}
+
+.App {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fdc10b;
+
+  margin: 10px;
+}
+
+.btn-group {
+  /* margin-top: 30px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 10px;
+}
+
+.btn {
+  background-color: #5d3fd3;
+  color: #ffffff;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.1s ease;
+  /* align-self: center; */
+  width: 30%;
+  max-width: 100px;
+  /* margin-top: 10px; */
+}
+
+.btn:hover {
+  background-color: #fdc10b;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.reset {
+  background-color: #fdc10b;
+}
+
+.reset:hover {
+  background-color: #bd0331;
+}
+
+#good:hover {
+  background-color: #3fd393;
+}
+#neutral:hover {
+  background-color: #ead72d;
+}
+#bad:hover {
+  background-color: #d33f3f;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.stats-row {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
