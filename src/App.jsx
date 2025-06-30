@@ -34,7 +34,6 @@ function App() {
   return (
     <div className="App">
       <Description />
-      <Feedback />
     </div>
   );
 }
