@@ -27,6 +27,10 @@ function App() {
     console.log(feedback);
   }
 
+  function resetFeedback() {
+    setFeedback(initialState);
+  }
+
   return (
     <div className="App">
       <Description />
