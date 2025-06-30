@@ -7,6 +7,11 @@ import Options from './components/Options';
 import Feedback from './components/Feedback';
 
 function App() {
+  const initialState = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
   return (
     <>
       <Description />
