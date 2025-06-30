@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './App.css';
 
@@ -13,7 +13,23 @@ function App() {
     bad: 0,
   };
 
-  const [feedback, setFeedback] = useState(initialState);
+  const [feedback, setFeedback] = useState(() => {
+    try {
+      const storedCounts = localStorage.getItem('feedback');
+      return storedCounts ? JSON.parse(storedCounts) : initialState;
+    } catch (error) {
+      console.error('Can`t load from localStorage:', error);
+      return initialState;
+    }
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('feedback', JSON.stringify(feedback));
+    } catch (error) {
+      console.error('Can`t save in localStorage:', error);
+    }
+  }, [feedback]);
 
   const totalFeedback = Object.values(feedback).reduce((acc, cur) => acc + cur, 0);
 
@@ -24,7 +40,6 @@ function App() {
       ...prevFeedback,
       [feedbackType]: prevFeedback[feedbackType] + 1,
     }));
-    console.log(feedback);
   }
 
   function resetFeedback() {
