@@ -34,6 +34,13 @@ function App() {
   return (
     <div className="App">
       <Description />
+      <Options
+        onFeedbackUpdate={updateFeedback}
+        feedback={feedback}
+        onReset={resetFeedback}
+        total={totalFeedback}
+      />
+      <Feedback feedback={feedback} total={totalFeedback} positive={positiveFeedback} />
     </div>
   );
 }
