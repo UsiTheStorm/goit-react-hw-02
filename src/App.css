@@ -88,6 +88,14 @@ body {
   background-color: #bd0331;
 }
 
+.reset:disabled {
+  background-color: #fdc10b;
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 #good:hover {
   background-color: #3fd393;
 }
