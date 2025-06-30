@@ -2,10 +2,16 @@ import { useState } from 'react';
 
 import './App.css';
 
+import Description from './components/Description';
+import Options from './components/Options';
+import Feedback from './components/Feedback';
+
 function App() {
   return (
     <>
-      <h1>goit-react-hw-02</h1>
+      <Description />
+      <Options />
+      <Feedback />
     </>
   );
 }
