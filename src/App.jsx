@@ -12,6 +12,18 @@ function App() {
     neutral: 0,
     bad: 0,
   };
+
+  const [feedback, setFeedback] = useState(initialState);
+
+
+  function updateFeedback(feedbackType) {
+    setFeedback((prevFeedback) => ({
+      ...prevFeedback,
+      [feedbackType]: prevFeedback[feedbackType] + 1,
+    }));
+    console.log(feedback);
+  }
+
   return (
     <div className="App">
       <Description />
