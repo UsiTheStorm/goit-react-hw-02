@@ -15,6 +15,7 @@ function App() {
 
   const [feedback, setFeedback] = useState(initialState);
 
+  const totalFeedback = Object.values(feedback).reduce((acc, cur) => acc + cur, 0);
 
   function updateFeedback(feedbackType) {
     setFeedback((prevFeedback) => ({
