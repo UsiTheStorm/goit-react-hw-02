@@ -17,6 +17,8 @@ function App() {
 
   const totalFeedback = Object.values(feedback).reduce((acc, cur) => acc + cur, 0);
 
+  const positiveFeedback = Math.round((feedback.good / totalFeedback) * 100);
+
   function updateFeedback(feedbackType) {
     setFeedback((prevFeedback) => ({
       ...prevFeedback,
